@@ -6,8 +6,8 @@ import java.time.LocalDate;
 import org.junit.Test;
 
 
-public class FlightBookingTest 
-{  
+public class FlightBookingTest
+{
     @Test
     public void testing_Constructor_Accepting_Arrays(){
         int size = 3;
@@ -24,14 +24,14 @@ public class FlightBookingTest
         }
 
         for(int j=0; j<size; ++j){
-            if((fb.getPassengerFullName(j) == fullName[j]) && (fb.getPassengerGender(j) == gender[j]) 
-            && fb.getPassengerAge(j) == age[j]){
+            if((fb.getPassengerFullName(j) == fullName[j]) && (fb.getPassengerGender(j) == gender[j])
+                    && fb.getPassengerAge(j) == age[j]){
                 assertEquals(1, 1);
             }
             else {
                 assertEquals(1, 2);
             }
-        }   
+        }
     }
 
     @Test
@@ -69,7 +69,7 @@ public class FlightBookingTest
         fb.setReturnDate(returningOn);
 
         fb.setDepartingTicketPrice(0, 3);
-        
+
         fb.setReturnTicketPrice();
 
         fb.setTotalTicketPrice();
@@ -84,13 +84,13 @@ public class FlightBookingTest
 
 
         for(int j=0; j<size; ++j){
-            if((fb.getPassengerFullName(j) == fullName[j]) && (fb.getPassengerGender(j) == gender[j]) 
-            && (fb.getPassengerAge(j) == age[j]) && (expectedTicketPrice == returnedTicketPrice)){
+            if((fb.getPassengerFullName(j) == fullName[j]) && (fb.getPassengerGender(j) == gender[j])
+                    && (fb.getPassengerAge(j) == age[j]) && (expectedTicketPrice == returnedTicketPrice)){
                 assertEquals(1, 1);
             }
             else {
                 assertEquals(1, 2);
             }
-        } 
-    }   
+        }
+    }
 }
